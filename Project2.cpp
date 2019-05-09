@@ -1,6 +1,3 @@
-// Project2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "pch.h"
 #include <iostream>
 
@@ -8,9 +5,7 @@ char getMedicationTypeFromPatient();
 
 char getSurgeryTypeFromPatient();
 
-/**
-
-* PatientAccount class*/
+//Patient Account
 
 class PatientAccount {
 
@@ -34,12 +29,6 @@ public:
 
 	}
 
-	/**
-
-	* method to display the charges*/
-
-
-
 	void displayCharges() {
 
 		double total = numberOfDays * daily_rate + charges;
@@ -48,19 +37,13 @@ public:
 
 	}
 
-	/**
-
-	* making Surgery and Pharmacy classes as friends so that they can access charges variable*/
-
 	friend class Surgery;
 
 	friend class Pharmacy;
 
 };
 
-/**
-
-* Surgery class*/
+// Surgery class
 
 class Surgery {
 
@@ -121,9 +104,7 @@ public:
 
 };
 
-/**
-
-* Pharmacy class*/
+//pharmacy class
 
 class Pharmacy {
 
@@ -238,9 +219,7 @@ int main() {
 
 }
 
-/**
-
-* method to get user input for surgery type*/
+//get user input for surgery type
 
 char getSurgeryTypeFromPatient() {
 
@@ -265,9 +244,7 @@ char getSurgeryTypeFromPatient() {
 
 }
 
-/**
-
-* method to get user input for medication type*/
+//get user input for medication type
 
 char getMedicationTypeFromPatient() {
 
